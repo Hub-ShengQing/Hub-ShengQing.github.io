@@ -1,0 +1,26 @@
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+:: 实现：联系
+:: 描述：
+:: 社交账号的跳转链接
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+<div class="contact">
+  <ul class="contact__list list-reset">
+    {% if site.data.settings.github %}
+      <li><a href="{{ site.data.settings.github }}"><i class="iconfont icon-github"></i></a></li>
+    {% else %} {% endif %}
+
+    {% if site.data.settings.gitee %}
+      <li><a href="{{ site.data.settings.gitee }}"><i class="iconfont icon-gitee"></i></a></li>
+    {% else %} {% endif %}
+  
+    {% if site.data.settings.zhihu %}
+      <li><a href="{{ site.data.settings.zhihu }}"><i class="iconfont icon-zhihu"></i></a></li>
+    {% else %} {% endif %}
+  
+    {% if site.data.settings.csdn %}
+      <li><a href="{{ site.data.settings.csdn }}"><i class="iconfont icon-csdn"></i></a></li>
+    {% else %} {% endif %}
+  
+  </ul>
+</div>

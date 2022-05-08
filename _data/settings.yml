@@ -1,0 +1,42 @@
+#-------------------------------
+# 网站常见设置
+title: AML.Blog
+logo: AML-logo.svg  # 添加自己的 logo
+description: 
+
+
+#-------------------------------
+# 博主信息
+author:
+  name: 升卿
+  image: Hero-image.jpg
+  say-hello: 你好，我是 <strong>升卿</strong>。
+  bio: 
+
+#-------------------------------
+# 联系链接
+github: https://github.com/Hub-ShengQing
+gitee: https://gitee.com/sheng-qing-s7
+zhihu: https://www.zhihu.com/people/hewes
+csdn: https://blog.csdn.net/Hewes
+
+
+#-------------------------------
+# 评论部分
+disqus-identifier: 升卿 # 添加评论的签名
+
+
+#-------------------------------
+# Instagram 订阅源
+instafeed: # To enable the instafeed, use the value true. To turn off use the value false.
+instagram-profile: artemsheludko_ # Add instagram username
+
+
+#-------------------------------
+# Google Analytics
+google-analytics: # Add your identifier. For example UA-99631805-1.
+
+
+#-------------------------------
+# Newsletter
+mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e

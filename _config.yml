@@ -1,0 +1,37 @@
+# 配置文件
+#-------------------------------
+baseurl: "" # 站点的子路径, 如 /blog
+url: "" # 站点的基本主机名和协议, 如 http://example.com
+
+
+# 构建设置
+markdown: kramdown
+permalink: pretty # 永久链接
+plugins:  # 插件
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll/tagging
+  
+paginate: 5 # 分页
+paginate_path: "/page/:num"
+
+
+# 页面路径
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+
+# 标签
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed

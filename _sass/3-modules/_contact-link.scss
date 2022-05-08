@@ -1,0 +1,19 @@
+// 联系方式列表样式设置
+.contact {
+  .contact__list {
+    li {
+      margin-left: 15px;
+      display: inline-block;
+
+      a i {
+        vertical-align: middle;
+        font-size: 24px;
+        color: $gray;
+
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+}
