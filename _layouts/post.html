@@ -6,7 +6,7 @@ layout: default
     <div class="row">
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
         <span class="post__date">
-          <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date: '%b %d, %Y'}}</time>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %d, %Y' }}</time>
         </span>
 
         <h1 class="post-title">{{ page.title | escape }}</h1>
@@ -14,7 +14,7 @@ layout: default
         <div class="post__info">
           <div class="post__author">
             <span>By</span>
-            <a href="{{ site.baseurl }}/about/" class="author-name">{{site.data.settings.author.name}}</a>
+            <a href="{{ site.baseurl }}/about/" class="author-name">{{ site.data.settings.author.name }}</a>
           </div>
 
           {% if page.tags.size >= 1 %}
@@ -128,8 +128,12 @@ layout: default
     {% endif %}
   </div>
 
+  <!-- 安装畅言的“打赏”组件 -->
   <div id="cyReward" role="cylabs" data-use="reward"></div>
-  {% if site.data.settings.changyan-appid %} {% include changyan-comments.html %} {% endif %}
+  {% if site.data.settings.changyan-appid %} 
+    <div id="SOHUCS" sid="{{ page.date }}"></div>
+    {% include changyan-comments.html %} 
+  {% endif %}
   <script type="text/javascript" charset="utf-8"
   src="https://cy-cdn.kuaizhan.com/js/??lib/jquery.js,changyan.labs.https.js?appid=cyw3W6zFu"></script>
 </div>

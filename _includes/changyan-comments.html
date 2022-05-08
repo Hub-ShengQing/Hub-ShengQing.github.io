@@ -1,5 +1,11 @@
-<!--PC和WAP自适应版-->
-<div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
+<!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+:: 实现：文章评论系统
+:: 描述：
+:: 安装第三方评论托管系统——畅言云评
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
+
+<!-- PC 和 WAP 自适应版 -->
+<!-- 开始畅言评论 -->
 <script type="text/javascript">
     (function () {
         var appid = '{{ site.data.settings.changyan-appid }}';
@@ -14,4 +20,6 @@
             script.src = 'https://cy-cdn.kuaizhan.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf;
             head.appendChild(script);
         } else { var loadJs = function (d, a) { var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement; var b = document.createElement("script"); b.setAttribute("type", "text/javascript"); b.setAttribute("charset", "UTF-8"); b.setAttribute("src", d); if (typeof a === "function") { if (window.attachEvent) { b.onreadystatechange = function () { var e = b.readyState; if (e === "loaded" || e === "complete") { b.onreadystatechange = null; a() } } } else { b.onload = a } } c.appendChild(b) }; loadJs("https://cy-cdn.kuaizhan.com/upload/changyan.js", function () { window.changyan.api.config({ appid: appid, conf: conf }) }); }
-    })(); </script>
+    })(); 
+</script>
+<!-- 结束畅言评论 -->
