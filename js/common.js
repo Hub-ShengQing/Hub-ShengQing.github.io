@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   'use strict';
 
   var headerOverlay = $(".header__overlay"),
@@ -10,9 +10,9 @@ $(document).ready(function() {
     searchBox = $(".search");
 
   /* =======================
-  // Menu and Search
+  // 目录与搜索
   ======================= */
-  menuOpenIcon.click(function() {
+  menuOpenIcon.click(function () {
     menuOpen();
   })
 
@@ -52,51 +52,32 @@ $(document).ready(function() {
   }
 
   /* =======================
-  // Responsive Videos
+  // 响应式视频
   ======================= */
   $(".post__content, .page__content").fitVids({
     customSelector: ['iframe[src*="ted.com"]']
   });
 
   /* =======================
-  // Zoom Image
+  // 缩放图像
   ======================= */
   $(".page img, .post img").attr("data-action", "zoom");
   $(".page a img, .post a img").removeAttr("data-action", "zoom");
 
   /* =======================
-  // Instagram Feed
+  // 滚动置顶按钮
   ======================= */
-  // userId and accessToken from Matthew Elsom (https://codepen.io/matthewelsom/pen/zrrrLN) for example, for which he thanks a lot!
-  var instagramFeed = new Instafeed({
-    get: 'user',
-    limit: 6,
-    resolution: 'standard_resolution',
-    userId: '8987997106',
-    accessToken: '8987997106.924f677.8555ecbd52584f41b9b22ec1a16dafb9',
-    template:
-      '<li class="instagram-item"><a href="{{link}}" aria-label="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}"></a></li>'
-  });
-
-  if ($('#instafeed').length) {
-    instagramFeed.run();
-  }
-
-  /* =======================
-  // Scroll Top Button
-  ======================= */
-  $(".top").click(function() {
+  $(".top").click(function () {
     $("html, body")
       .stop()
       .animate({ scrollTop: 0 }, "slow", "swing");
   });
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > $(window).height()) {
       $(".top").addClass("is-active");
     } else {
       $(".top").removeClass("is-active");
     }
   });
-
 
 });
