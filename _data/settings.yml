@@ -1,7 +1,7 @@
 #-------------------------------
 # 网站常见设置
 title: AML.Blog
-logo: AML-logo.svg  # 添加自己的 logo
+logo: AML-logo.svg  # 添加 logo
 description: 
 
 
@@ -9,7 +9,7 @@ description:
 # 博主信息
 author:
   name: 升卿
-  image: Hero-image.jpg
+  image: https://s1.ax1x.com/2022/05/09/O8LgCd.jpg
   say-hello: 你好，我是 <strong>升卿</strong>。
   bio: 
 
@@ -22,21 +22,13 @@ csdn: https://blog.csdn.net/Hewes
 
 
 #-------------------------------
-# 评论部分
-disqus-identifier: 升卿 # 添加评论的签名
+# 畅言评论
 changyan-appid: cyw3W6zFu
 changyan-conf: prod_b2bbba6538754464944d6c2f02347656
 
-
 #-------------------------------
-# Instagram 订阅源
-instafeed: # To enable the instafeed, use the value true. To turn off use the value false.
-instagram-profile: artemsheludko_ # Add instagram username
-
-
-#-------------------------------
-# Google Analytics
-google-analytics: # Add your identifier. For example UA-99631805-1.
+# 百度统计
+baidu-analytics: true # 开启百度统计
 
 
 #-------------------------------

@@ -1,52 +1,51 @@
 // *****************
 // 全局变量
 // *****************
-
-// Spaces
+// 间隙
 $base-spacing-unit: 20px;
 
-// Border radius
+// 边框半径
 $global-radius: 3px;
 
-// Transition
+// 过渡
 $global-transition: all .35s;
 
 
 // *****************
-// Color Variables
+// 颜色变量
 // *****************
 // $brand-color: #f6b141;
-$brand-color: #f0464b;
+$brand-color: #f0464b;  // 标记色
 $dark: #393e46;
 $gray: #bbbbbb;
 $light-gray: #e6eef0;
 $white: #ffffff;
 $black: #000000;
 
-// Background Colors
+// 背景色
 $background-color: $white;
 
-// Body Color
+// 主题色
 $text-color: $dark;
 // $text-color: $black;
 
-// Headings
+// 标题色
 $heading-font-color: $dark;
 
-// Links
+// 链接色
 $link-color: $brand-color;
 $link-color-hover: darken($dark, 15%);
 
-// Button
+// 按钮色
 $button-color: $white;
 $button-background-color: $brand-color;
 
-// Border
+// 边框色
 $border-color: $light-gray;
 
 
 // *****************
-// Typography
+// 排版
 // *****************
 $base-font-size: 16px;
 $base-font-style: normal;
@@ -55,15 +54,13 @@ $base-font-weight: normal;
 $base-font-family: 'Monaco', 'zh-font';
 $base-line-height: 26px;
 
-// Headings
+// 标题
 $heading-font-weight: 700;
 $heading-font-family: 'Monaco', 'zh-font';
-
 $font-size-h1: 36px;
 $font-size-h2: 28px;
 $font-size-h3: 24px;
 $font-size-h4: 20px;
 $font-size-h5: 18px;
 $font-size-h6: 16px;
-
 $heading-line-height: 1.2;

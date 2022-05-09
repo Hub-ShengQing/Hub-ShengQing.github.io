@@ -1,4 +1,4 @@
-// Clearfix
+// 清除浮动
 @mixin clearfix() {
   &::after,
   ::before {
@@ -8,14 +8,16 @@
   }
 }
 
-// Reset list
+
+// 重置列表
 @mixin list-reset() {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-// Screen reader text
+
+// 屏幕阅读器文本
 @mixin screen-reader() {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
