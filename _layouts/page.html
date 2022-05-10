@@ -12,7 +12,6 @@ layout: default
 
 	{% if page.image %}
 	<div class="page__head">
-		<!-- <div class="page-image" style="background-image: url({{site.baseurl}}/assets/images/{{page.image}})"></div> -->
 		<div class="page-image" style="background-image: url('{{ page.image }}')"></div>
 	</div>
 	{% endif %}
@@ -20,12 +19,12 @@ layout: default
 
 <div class="container">
 	<div class="row">
-		<!-- begin page -->
+		<!-- 开始页面 -->
 		<article class="page col col-8 col-t-10 col-m-12">
 			<div class="page__content">
 				{{ content }}
 			</div>
 		</article>
-		<!-- end page -->
+		<!-- 结束页面 -->
 	</div>
 </div>

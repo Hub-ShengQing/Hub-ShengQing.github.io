@@ -1,5 +1,5 @@
 #-------------------------------
-# 网站常见设置
+# 常用设置
 title: AML.Blog
 logo: AML-logo.svg  # 添加 logo
 description: 
@@ -12,6 +12,7 @@ author:
   image: https://s1.ax1x.com/2022/05/09/O8LgCd.jpg
   say-hello: 你好，我是 <strong>升卿</strong>。
   bio: 
+
 
 #-------------------------------
 # 联系链接
@@ -26,11 +27,9 @@ csdn: https://blog.csdn.net/Hewes
 changyan-appid: cyw3W6zFu
 changyan-conf: prod_b2bbba6538754464944d6c2f02347656
 
+
 #-------------------------------
 # 百度统计
 baidu-analytics: true # 开启百度统计
-
-
-#-------------------------------
-# Newsletter
-mailchimp: # Add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+github-hm-src: https://hm.baidu.com/hm.js?4b059972d5e287d22e6ffd35b37d30c9 # 监视 github.io
+gitee-hm-src: https://hm.baidu.com/hm.js?c57a48aa80e8efa8762daea444867058 # 监视 gitee.io

@@ -8,7 +8,13 @@
   var _hmt = _hmt || [];
   (function () {
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?4b059972d5e287d22e6ffd35b37d30c9";
+
+    if ('{{ site.url }}'.includes('hub-shengqing.github.io')) {
+      hm.src = '{{ site.data.settings.github-hm-src }}';
+    } else {
+      hm.src = '{{ site.data.settings.gitee-hm-src }}';
+    }
+
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   })();
