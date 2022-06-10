@@ -1,8 +1,8 @@
 #-------------------------------
 # 常用设置
-title: AML.Blog
-logo: AML-logo.svg  # 添加 logo
-description: 
+title: AML.Blog # 设置博客的标题
+logo: AML-logo.svg  # 设置博客的 logo
+description: # 博客的描述
 
 
 #-------------------------------

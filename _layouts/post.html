@@ -30,14 +30,15 @@ layout: default
     </div>
   </div>
 
-  {% assign no-image = nil %}
+  <!-- 选择显示文章封面插图 -->
+  <!-- {% assign no-image = nil %}
   {% if page.image %}
   <div class="post__head">
     <div class="post-image" style="background-image: url({{page.image}})"></div>
   </div>
   {% else %}
   {% assign no-image = 'post-no-image' %}
-  {% endif %}
+  {% endif %} -->
 
 </div>
 
@@ -130,10 +131,10 @@ layout: default
 
   <!-- 安装畅言的“打赏”组件 -->
   <div id="cyReward" role="cylabs" data-use="reward"></div>
-  {% if site.data.settings.changyan-appid %} 
-    <div id="SOHUCS" sid="{{ page.date }}"></div>
-    {% include changyan-comments.html %} 
+  {% if site.data.settings.changyan-appid %}
+  <div id="SOHUCS" sid="{{ page.date }}"></div>
+  {% include changyan-comments.html %}
   {% endif %}
   <script type="text/javascript" charset="utf-8"
-  src="https://cy-cdn.kuaizhan.com/js/??lib/jquery.js,changyan.labs.https.js?appid=cyw3W6zFu"></script>
+    src="https://cy-cdn.kuaizhan.com/js/??lib/jquery.js,changyan.labs.https.js?appid=cyw3W6zFu"></script>
 </div>

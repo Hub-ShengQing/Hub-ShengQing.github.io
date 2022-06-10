@@ -14,9 +14,8 @@ $global-transition: all .35s;
 // *****************
 // 颜色变量
 // *****************
-// $brand-color: #f6b141;
 $brand-color: #f0464b; // 标记色
-$dark: #393e46;
+$dark: #343434;
 $gray: #bbbbbb;
 $light-gray: #e6eef0;
 $white: #ffffff;
@@ -27,7 +26,6 @@ $background-color: $white;
 
 // 主题色
 $text-color: $dark;
-// $text-color: $black;
 
 // 标题色
 $heading-font-color: $dark;
@@ -47,13 +45,15 @@ $border-color: $light-gray;
 // *****************
 // 排版
 // *****************
-$base-font-size: 15px;
+$base-font-size: 16px;
 $base-font-style: normal;
 $base-font-variant: normal;
 $base-font-weight: normal;
 $base-font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue,
     PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei,
     Arial, sans-serif;
+// $base-font-family: "Times New Roman", Garamond, "MS Serif", serif;
+// $base-font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", "Noto Serif Japanese", serif;
 $base-line-height: 1.75;
 
 // 标题
@@ -65,4 +65,4 @@ $font-size-h3: 24px;
 $font-size-h4: 20px;
 $font-size-h5: 18px;
 $font-size-h6: 16px;
-$heading-line-height: 1.2;
+$heading-line-height: 1.4;
