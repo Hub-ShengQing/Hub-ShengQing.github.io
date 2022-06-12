@@ -76,13 +76,11 @@
       display: inline-block;
 
       .nav__link {
-        display: inline-block;
-        padding: 10px 30px;
-        font-size: 24px;
+        padding: 0px 40px;
+        font-size: 36px;
         font-weight: 800;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: $dark;
+        letter-spacing: 8px;
+        color: $gray;
 
         &:hover {
           color: $black;

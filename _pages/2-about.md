@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: 关吾
 permalink: /about/
 image: https://s1.ax1x.com/2022/05/09/O8LgCd.jpg
 ---
