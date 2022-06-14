@@ -1,6 +1,6 @@
 .post-title-box {
   padding: 40px 0;
-  border-top: 2px solid $light-gray;
+  border-top: 1px solid $light-gray;
 
   .post-title {
     margin-bottom: 10px;
@@ -89,9 +89,55 @@
 .post__content {
   margin-bottom: 40px;
 
+  // 1. 设置文章中的图片居中
   img {
     display: block;
     margin: 0 auto;
+  }
+
+  // 2. 设置文章的 h2 标题的样式
+  h2 {
+    color: #007aaa;
+    text-align: center;
+  }
+
+  // 3. 设置文章前言的样式
+  .foreword {
+    margin-bottom: 20px;
+    background-color: #ececec;
+    border: 1px solid rgb(204, 204, 204);
+    color: #007aaa;
+
+    section {
+      position: relative;
+      left: -8px;
+      top: 30px;
+      width: 9em;
+    }
+
+    #section1 {
+      border-radius: 0px 0.5em 0.5em 0px;
+      padding: 0.2em 1.0em;
+      color: $white;
+      background-color: rgb(1, 108, 118);
+    }
+
+    #section2 {
+      width: 0;
+      border-right: 4px solid rgb(1, 108, 118);
+      border-top: 4px solid rgb(1, 108, 118);
+      border-left: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+
+    ul {
+      padding: 1em;
+
+      span {
+        color: #888888;
+      }
+    }
+
   }
 }
 
