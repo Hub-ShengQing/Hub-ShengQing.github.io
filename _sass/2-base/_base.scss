@@ -5,13 +5,14 @@
 }
 
 body {
-  font-family: $base-font-family;
+  background: url("{{ site.baseurl }}/assets/images/bg.gif") repeat 0 0 #efeeeb;
+  color: $text-color;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: $text-color;
-  background: url("{{ site.baseurl }}/assets/images/bg.gif") repeat 0 0 #efeeeb;
+  font-family: $base-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  // letter-spacing: 1.5px;
 
   input,
   textarea {
@@ -44,8 +45,8 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
-  line-height: initial;
-  letter-spacing: 0.5px;
+  line-height: $heading-line-height;
+  color: $heading-font-color;
 }
 
 h1 {

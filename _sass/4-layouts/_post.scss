@@ -6,7 +6,6 @@
     margin-bottom: 10px;
     width: 600px;
     max-width: 100%;
-    line-height: 1.4;
   }
 
   .post__date {
@@ -97,44 +96,42 @@
 
   // 2. 设置文章的 h2 标题的样式
   h2 {
-    color: #007aaa;
+    color: $blue;
     text-align: center;
   }
 
   // 3. 设置文章前言的样式
   .foreword {
     margin-bottom: 20px;
-    background-color: #ececec;
-    border: 1px solid rgb(204, 204, 204);
-    color: #007aaa;
+    border: 1px solid $gray;
+    background-color: $light-gray;
+    color: $blue;
 
     section {
       position: relative;
       left: -8px;
       top: 30px;
-      width: 9em;
+      width: 9.5em;
     }
 
     #section1 {
-      border-radius: 0px 0.5em 0.5em 0px;
       padding: 0.2em 1.0em;
+      border-radius: 0px 8px 8px 0px;
+      background-color: $cyan;
       color: $white;
-      background-color: rgb(1, 108, 118);
     }
 
     #section2 {
       width: 0;
-      border-right: 4px solid rgb(1, 108, 118);
-      border-top: 4px solid rgb(1, 108, 118);
-      border-left: 4px solid transparent;
-      border-bottom: 4px solid transparent;
+      border: 4px solid;
+      border-color: $cyan $cyan transparent transparent;
     }
 
-    ul {
+    #forewordUL {
       padding: 1em;
 
       span {
-        color: #888888;
+        color: $gray;
       }
     }
 

@@ -13,7 +13,7 @@ description: 通过学习各家大厂的网页排版和字体设置，我们能�
     <section id="section1"><b>重要的话先抛：</b></section>
     <section id="section2"></section>
     <br>
-    <ul>
+    <ul id="forewordUL">
         <li>优雅的排版就像是耐看型的美女，一颦一笑都拨动着你的心弦。</li>
         <li>要慎用自定义字体，而不是完全摒弃。<span>（颜值和实用性，并不是两极分化的，把握住平衡就好）</span></li>
         <li></li>
@@ -33,7 +33,9 @@ description: 通过学习各家大厂的网页排版和字体设置，我们能�
 
 ## 0. 需详细解读的基础知识
 
-这部分介绍了**如何定义字体的系列、大小、粗细、行高和文字样式等**。此部分基本是学习笔记，有一定基础的读者可选择性阅读，笔记主要出处有：“[黑马程序员 pink 老师前端入门教程](https://www.bilibili.com/video/BV14J4114768?p=72)” 、“[MDN 基本文本和字体样式](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)” 。
+这部分介绍了**如何定义字体的系列、大小、粗细、行高和文字样式等**。
+
+此部分基本是学习笔记，有一定基础的读者可选择性阅读，笔记主要出处有：“[黑马程序员 pink 老师前端入门教程](https://www.bilibili.com/video/BV14J4114768?p=72)” 、“[MDN 基本文本和字体样式](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)” 。
 
 ### 0.1 font-style 文字样式
 

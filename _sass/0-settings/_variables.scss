@@ -15,11 +15,15 @@ $global-transition: all .35s;
 // 颜色变量
 // *****************
 $brand-color: #f0464b; // 标记色
-$dark: #343434;
-$gray: #bbbbbb;
-$light-gray: #cccccc;
-$white: #ffffff;
+$blue: #007aaa;
+$cyan: #016c76;
 $black: #000000;
+$dark: #343434;
+$gray: #888888;
+$light-gray: #ececec;
+$white: #ffffff;
+
+
 
 // 背景色
 $background-color: $white;
@@ -28,7 +32,7 @@ $background-color: $white;
 $text-color: $dark;
 
 // 标题色
-$heading-font-color: $dark;
+$heading-font-color: $black;
 
 // 链接色
 $link-color: $brand-color;
