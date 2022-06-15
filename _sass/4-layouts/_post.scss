@@ -103,7 +103,8 @@
   // 3. 设置文章前言的样式
   .foreword {
     margin-bottom: 20px;
-    border: 1px solid $gray;
+    border: 2px solid $gray;
+    border-radius: 10px;
     background-color: $light-gray;
     color: $blue;
 
@@ -129,12 +130,20 @@
 
     #forewordUL {
       padding: 1em;
-
-      span {
-        color: $gray;
-      }
     }
 
+    // 4. 设置文章文本的样式
+    red {
+      color: $red;
+    }
+
+    blue {
+      color: $red;
+    }
+
+    gray {
+      color: $gray;
+    }
   }
 }
 

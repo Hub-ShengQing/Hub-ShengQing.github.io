@@ -15,15 +15,14 @@ $global-transition: all .35s;
 // 颜色变量
 // *****************
 $brand-color: #f0464b; // 标记色
+$red: #ab1942;
 $blue: #007aaa;
 $cyan: #016c76;
 $black: #000000;
-$dark: #343434;
+$dark: #333333;
 $gray: #888888;
 $light-gray: #ececec;
 $white: #ffffff;
-
-
 
 // 背景色
 $background-color: $white;
@@ -35,7 +34,7 @@ $text-color: $dark;
 $heading-font-color: $black;
 
 // 链接色
-$link-color: $brand-color;
+$link-color: $blue;
 $link-color-hover: darken($dark, 15%);
 
 // 按钮色
@@ -63,10 +62,13 @@ $base-line-height: 1.75;
 // 标题
 $heading-font-weight: 700;
 $heading-font-family: $base-font-family;
-$font-size-h1: 36px;
-$font-size-h2: 28px;
-$font-size-h3: 24px;
-$font-size-h4: 20px;
-$font-size-h5: 18px;
-$font-size-h6: 16px;
-$heading-line-height: 1.4;
+$font-size-h1: 24px;
+$font-size-h2: 20px;
+$font-size-h3: 16px;
+// $font-size-h1: 36px;
+// $font-size-h2: 28px;
+// $font-size-h3: 24px;
+// $font-size-h4: 20px;
+// $font-size-h5: 18px;
+// $font-size-h6: 16px;
+$heading-line-height: 2.0;
