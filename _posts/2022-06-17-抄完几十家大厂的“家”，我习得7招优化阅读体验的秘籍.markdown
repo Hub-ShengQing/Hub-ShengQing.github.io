@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "抄完几十家大厂的“家”，我习得7招优化阅读体验的秘籍"
-date: 2022-06-10
+date: 2022-06-17
 image:  https://s1.ax1x.com/2022/06/10/Xyjidg.jpg
 tags:   CSS 字体 排版
-description: 通过学习各家大厂的网页排版和字体设置，我们能更加优雅地选择<blue>文字颜色、字体系列</blue>，设置<blue>字体大小、行高、行长</blue>，优化<blue>字体加载、纵向分布</blue>，提升阅读体验感等等。
+description: 通过学习各家大厂的网页排版和字体设置，我们能更加优雅地选择<font color='#007AAA'>文字颜色、字体系列</font>，设置<font color='#007AAA'>字体大小、行高、行长</font>，优化<font color='#007AAA'>字体加载、纵向分布</font>，提升阅读体验感等等。
 ---
 
 ![起始线](https://s1.ax1x.com/2022/06/12/X2EkwQ.png)

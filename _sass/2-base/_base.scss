@@ -97,7 +97,7 @@ blockquote {
   }
 }
 
-// 设置代码样式
+// 设置文章代码样式
 pre {
   overflow: auto;
   padding-left: 15px;
@@ -107,12 +107,14 @@ pre {
   word-break: break-all;
 }
 
+// 设置文章插入的图片样式
 img,
 .zoom-img-wrap {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 
+  // 设置图片说明样式
   &+em {
     text-align: center;
     display: block;

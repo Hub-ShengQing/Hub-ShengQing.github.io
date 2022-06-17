@@ -41,10 +41,12 @@
     }
   }
 
+  // 设置文章标签样式
   .post__tags {
     .post__tags-tag {
       position: relative;
       padding-left: 15px;
+      color: $brand-color;
       font-weight: 700;
 
       &:before {
