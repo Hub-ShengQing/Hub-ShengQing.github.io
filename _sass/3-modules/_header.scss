@@ -76,14 +76,15 @@
       display: inline-block;
 
       .nav__link {
-        padding: 0px 40px;
-        font-size: 36px;
-        font-weight: 800;
-        letter-spacing: 8px;
-        color: $gray;
+        margin: 0px 20px;
+        opacity: 0.9;
+
+        img {
+          max-height: 58px;
+        }
 
         &:hover {
-          color: $black;
+          opacity: 0.45;
         }
       }
     }
