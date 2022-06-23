@@ -10,8 +10,9 @@ description: # 博客的描述
 author:
   name: 升卿
   image: https://s1.ax1x.com/2022/05/09/O8LgCd.jpg
-  say-hello: 你好，我是 <strong>升卿</strong>。
-  bio: 
+  say-hello: 你好，<br/> 我是 <b>升卿</b>。
+  bio: 一个兴趣是当英雄的人。<br/>热爱编程、艺术、写作和摄影。<br/>借此分享一些个人的想法和知识，努力成长。<br/>一起变秃，一起变强~
+  motto: 世界上只有一种英雄主义，就是在认清生活真相之后依然热爱生活。
 
 
 #-------------------------------

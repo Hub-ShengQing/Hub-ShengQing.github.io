@@ -12,6 +12,8 @@
         <div class="hero__content">
           <h1 class="hero__title">{{ site.data.settings.author.say-hello }}</h1>
           <p class="hero__subtitle">{{ site.data.settings.author.bio }}</p>
+          <h4 class="hero__motto">@座右铭</h4>
+          <p class="hero__submotto">{{ site.data.settings.author.motto }}</p>
           <div class="hero__social">
             <span class="hero__social-title">关注升卿 |</span>
             {% include contact-link.html %}
@@ -21,11 +23,10 @@
 
       <div class="col col-6 col-t-12">
         <div class="hero__image">
-          <!-- <img src="{{site.baseurl}}/assets/images/{{ site.data.settings.author.image }}" alt=""> -->
-          <img src="{{ site.data.settings.author.image }}" alt="">
+          <img src="{{ site.data.settings.author.image }}">
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>

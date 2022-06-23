@@ -14,23 +14,40 @@
     width: 100%;
     padding: 0 40px 0 0;
 
+    // 招呼语
     .hero__title {
       font-size: 36px;
+      line-height: 1.2;
       font-weight: normal;
     }
 
+    // 简介
     .hero__subtitle {
       font-size: 18px;
-      line-height: 32px;
-      letter-spacing: 0.5px;
+      letter-spacing: 1.0px;
     }
 
+    // 座右铭标题
+    .hero__motto {
+      color: $cyan;
+      line-height: 1.4;
+    }
+
+    // 座右铭
+    .hero__submotto {
+      padding: 0em 1em;
+      color: $red;
+      font-weight: 700;
+    }
+
+    // 社交方式
     .hero__social {
       display: flex;
       line-height: 30px;
       align-items: center;
     }
 
+    // 社交方式的标题
     .hero__social-title {
       text-align: center;
       font-weight: 700;
@@ -38,6 +55,7 @@
 
   }
 
+  // 个人图片
   .hero__image {
     img {
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -50,7 +68,6 @@
 
       .hero__subtitle {
         font-size: 16px;
-        line-height: 28px;
       }
     }
   }
