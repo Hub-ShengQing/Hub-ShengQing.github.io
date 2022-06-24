@@ -25,24 +25,20 @@
 
           <div class="main-nav__box">
             <div class="nav-icon__close">
-              <i class="ion ion-ios-close-circle-outline"></i>
+              <span class="iconfont icon-cuowuguanbiquxiao-xianxingyuankuang"></span>
             </div>
 
-            <div class="nav__title"></div>
+            <div class="nav__title">目录</div>
 
             <ul class="nav__list list-reset">
               <li class="nav__item">
-                <a href="{{site.baseurl}}/" class="nav__link">
-                  <img src="{{ site.baseurl }}/assets/images/home-page.png" alt="首页" />
-                </a>
+                <a href="{{site.baseurl}}/" class="nav__link">首页</a>
               </li>
               {% for page in site.pages %}
               {% unless page.name == 'tags.html' or page.name == '404.html' %}
               {% if page.title %}
               <li class="nav__item">
-                <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">
-                  <img src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}" />
-                </a>
+                <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
               </li>
               {% endif %}
               {% endunless %}
@@ -53,8 +49,8 @@
         </nav>
 
         <div class="nav-buttons">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu" aria-label="Menu Icon"></i>
-          <i class="nav__icon nav__icon-search ion ion-md-search" aria-label="Search Icon"></i>
+          <i class="nav__icon nav__icon-menu iconfont icon-menu2" aria-label="Menu Icon"></i>
+          <i class="nav__icon nav__icon-search iconfont icon-sousuo" aria-label="Search Icon"></i>
         </div>
 
         <div class="header__overlay"></div>
