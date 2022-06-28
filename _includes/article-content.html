@@ -44,16 +44,19 @@
                 site.minima.date_format | default: "%B %-d, %Y" %}{{ post.date | date: date_format }}</time></span>
 
             <!-- 添加文章的评论数 -->
-            <span class="iconfont icon-pinglun3"></span>
-            <span id="sourceId::{{ post.title }}" class="cy_cmt_count"></span>
+            <div class="article__data">
+              <span class="iconfont icon-pinglun3"></span>
+              <span id="sourceId::{{ post.title }}" class="cy_cmt_count"></span>
+              <script id="cy_cmt_num"
+                src="https://cy-cdn.kuaizhan.com/upload/plugins/plugins.list.count.js?clientId=cyw3W6zFu">
+                </script>
+            </div>
 
-            <script id="cy_cmt_num"
-              src="https://cy-cdn.kuaizhan.com/upload/plugins/plugins.list.count.js?clientId=cyw3W6zFu">
-              </script>
+            
+
           </div>
 
-          <a href="{{post.url | prepend: site.baseurl}}" class="read-more">阅读全文<span
-              class="iconfont icon-gengduo"></span></a>
+          <a href="{{post.url | prepend: site.baseurl}}" class="read-more">阅读全文<i class="iconfont icon-gengduo"></i></a>
         </div>
 
       </div>

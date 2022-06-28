@@ -64,11 +64,19 @@
     }
 
     .article__meta {
+      display: flex;
+      align-items: center;
       color: $gray;
       font-size: 12px;
-      line-height: 1.5;
+      text-transform: uppercase;
+
+      .article__data {
+        padding-left: 1em;
+      }
+
     }
 
+    // 阅读全文
     .article__footer {
       display: flex;
       align-items: center;
@@ -80,7 +88,12 @@
         font-size: 12px;
         letter-spacing: 1px;
         border-bottom: 1px solid transparent;
-        
+
+        // 阅读全文的箭头
+        i {
+          font-size: inherit;
+        }
+
         &:hover {
           color: $dark;
           border-color: $brand-color;
