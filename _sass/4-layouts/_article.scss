@@ -64,10 +64,9 @@
     }
 
     .article__meta {
-      font-size: 12px;
-      line-height: 18px;
-      text-transform: uppercase;
       color: $gray;
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     .article__footer {
@@ -77,13 +76,11 @@
       .read-more {
         margin-left: auto;
         padding-bottom: 5px;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        border-bottom: 1px solid transparent;
         color: $gray;
-
+        font-size: 12px;
+        letter-spacing: 1px;
+        border-bottom: 1px solid transparent;
+        
         &:hover {
           color: $dark;
           border-color: $brand-color;
