@@ -6,25 +6,25 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "988620",
+      "name": "热度",
+      "font_class": "icon",
+      "unicode": "e68e",
+      "unicode_decimal": 59022
+    },
+    {
+      "icon_id": "12476900",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
       "icon_id": "10232748",
       "name": "更多",
       "font_class": "gengduo",
       "unicode": "e78a",
       "unicode_decimal": 59274
-    },
-    {
-      "icon_id": "36499",
-      "name": "评论/回复",
-      "font_class": "pinglun3",
-      "unicode": "e602",
-      "unicode_decimal": 58882
-    },
-    {
-      "icon_id": "1447327",
-      "name": "查看",
-      "font_class": "chakan",
-      "unicode": "e60e",
-      "unicode_decimal": 58894
     },
     {
       "icon_id": "1727522",

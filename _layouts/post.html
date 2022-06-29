@@ -7,6 +7,17 @@ layout: default
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
         <span class="post__date">
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %d, %Y' }}</time>
+          <span id="busuanzi_container_page_pv"> 阅读 <span id="busuanzi_value_page_pv"></span></span>
+          <script>
+            let postValue = document.getElementById("busuanzi_value_page_pv");
+            let articleValue = document.getElementById("value__page");
+
+            if (postValue) {
+              console.log(postValue);
+              console.log(postValue.innerText);
+            }
+            // articleValue.innerText = postValue.value;
+          </script>
         </span>
 
         <h1 class="post-title">{{ page.title | escape }}</h1>
@@ -16,7 +27,7 @@ layout: default
             <span>By</span>
             <a href="{{ site.baseurl }}/about/" class="author-name">{{ site.data.settings.author.name }}</a>
           </div>
-          
+
           {% if page.tags.size >= 1 %}
           <div class="post__tags">
             {% for tag in page.tags %}
@@ -41,7 +52,6 @@ layout: default
   {% endif %} -->
 
 </div>
-
 
 <div class="container">
   <div class="row">

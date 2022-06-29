@@ -39,7 +39,7 @@
     .article__tag {
       color: $brand-color;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
@@ -57,37 +57,35 @@
       }
     }
 
+    // 文章节选
     .article__excerpt {
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 26px;
+      margin-bottom: 1em;
     }
 
-    .article__meta {
-      display: flex;
-      align-items: center;
-      color: $gray;
-      font-size: 12px;
-      text-transform: uppercase;
-
-      .article__data {
-        padding-left: 1em;
-      }
-
-    }
-
-    // 阅读全文
+    // 文章页脚
     .article__footer {
       display: flex;
       align-items: center;
+      color: $gray;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
 
+      // 数据
+      .article__data {
+        margin: 0 auto;
+        padding: 0 10px;
+        
+        // 分割
+        .septal{
+          margin: 0 1em;
+        }
+      }
+
+      // 阅读全文
       .read-more {
-        margin-left: auto;
-        padding-bottom: 5px;
-        color: $gray;
-        font-size: 12px;
-        letter-spacing: 1px;
         border-bottom: 1px solid transparent;
+        color: $gray;
 
         // 阅读全文的箭头
         i {
