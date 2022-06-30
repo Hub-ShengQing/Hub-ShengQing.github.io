@@ -7,15 +7,31 @@ layout: default
       <div class="col col-10 push-2 col-11 push-t-1 col-m-12 push-m-0">
         <span class="post__date">
           <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %d, %Y' }}</time>
-          <span id="busuanzi_container_page_pv"> 阅读 <span id="busuanzi_value_page_pv"></span></span>
-          <script>
-            let postValue = document.getElementById("busuanzi_value_page_pv");
-            let articleValue = document.getElementById("value__page");
+          <span id="busuanzi_container_page_pv"> <span class="iconfont icon-icon"> </span><span id="busuanzi_value_page_pv"></span></span>
 
-            if (postValue) {
-              console.log(postValue);
-              console.log(postValue.innerText);
-            }
+          <script>
+            var reading = setInterval(() => {
+              let postValue = document.getElementById("busuanzi_value_page_pv");
+              let articleValue = document.getElementById("value__page");
+              if (postValue.innerText) {
+                // console.log(postValue);
+                // console.log(postValue.innerText);
+                // articleValue.innerText = postValue.innerText;
+                console.log(page.date);
+                clearTimeout(reading);
+
+              }
+            }, 1000);
+
+
+            // if (postValue.innerText) {
+            //   console.log(postValue);
+            //   console.log(postValue.innerText);
+            // }
+
+            // setTimeout
+
+
             // articleValue.innerText = postValue.value;
           </script>
         </span>
@@ -104,7 +120,7 @@ layout: default
     {% if page.previous.url %}
     <div class="prev">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.previous.url}}"
-        style="background-image: url({{site.baseurl}}/assets/images/{{page.previous.image}})"></a>
+        style="background-image: url({{page.previous.image}})"></a>
       <h2 class="post__nav__title">
         <i class="ion ion-md-arrow-back"></i>
         <a href="{{ site.baseurl }}{{page.previous.url}}">{{page.previous.title}}</a>
@@ -122,7 +138,7 @@ layout: default
     {% if page.next.url %}
     <div class="next">
       <a class="post__nav__image" href="{{ site.baseurl }}{{page.next.url}}"
-        style="background-image: url({{site.baseurl}}/assets/images/{{page.next.image}})">
+        style="background-image: url({{page.next.image}})">
       </a>
       <h2 class="post__nav__title">
         <a href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}}</a>
