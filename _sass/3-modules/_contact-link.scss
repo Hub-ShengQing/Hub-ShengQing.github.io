@@ -1,4 +1,4 @@
-// 联系方式列表样式设置
+// 联系方式列表的样式设置
 .contact {
   .contact__list {
     li {
@@ -7,8 +7,8 @@
 
       a i {
         vertical-align: middle;
-        font-size: 24px;
-        color: $gray;
+        font-size: 18px;
+        color: #bbb;
 
         &:hover {
           color: $dark;

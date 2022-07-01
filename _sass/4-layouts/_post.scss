@@ -1,24 +1,34 @@
 .post-title-box {
-  padding: 40px 0;
+  // padding: 40px 0;
   border-top: 1px solid $light-gray;
 
   .post-title {
     margin-bottom: 10px;
-    width: 600px;
+    width: 500px;
     max-width: 100%;
   }
 
-  .post__date {
-    font-weight: 700;
+  .post__dr {
+    display: flex;
+    align-items: center;
+
+    .post__date {
+      font-weight: 700;
+    }
+
+    .post__reading {
+      position: absolute;
+      right: 0;
+      color: $gray;
+      font-size: 14px;
+    }
   }
 
   @media only screen and (max-width: $mobile) {
-    padding: 40px 0;
+    // padding: 40px 0;
 
     .post-title {
       margin: 10px 0;
-      font-size: 47px;
-      line-height: 1.4;
     }
   }
 }
@@ -80,6 +90,7 @@
 }
 
 .post {
+  position: relative;
   margin: 0 auto 80px;
 
   @media only screen and (max-width: $mobile) {

@@ -1,7 +1,6 @@
 .header {
   position: relative;
-  height: 90px;
-  padding: 10px 0;
+  height: 100px;
 
   .header__overlay {
     position: fixed;
@@ -44,7 +43,7 @@
   }
 
   .logo__image {
-    max-height: 70px;
+    max-height: 60px;
   }
 }
 
