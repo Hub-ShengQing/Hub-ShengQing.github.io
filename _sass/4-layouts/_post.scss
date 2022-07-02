@@ -1,5 +1,5 @@
 .post-title-box {
-  // padding: 40px 0;
+  padding-top: 40px;
   border-top: 1px solid $light-gray;
 
   .post-title {
@@ -25,8 +25,6 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    // padding: 40px 0;
-
     .post-title {
       margin: 10px 0;
     }
@@ -91,7 +89,7 @@
 
 .post {
   position: relative;
-  margin: 0 auto 80px;
+  margin: 0 auto 60px;
 
   @media only screen and (max-width: $mobile) {
     margin: 0 auto 40px;
@@ -151,20 +149,21 @@
   display: flex;
 
   .share__title {
-    margin-right: 10px;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.5px;
   }
 
   .share__list {
+    display: flex;
+    align-items: center;
+
     .share__item {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0 8px;
 
       a {
-        font-size: 18px;
-        color: $gray;
+        color: #bbb;
 
         &:hover {
           color: $dark;
@@ -177,9 +176,8 @@
 .post__navigation {
   display: flex;
   align-items: baseline;
-  margin-bottom: 80px;
-  padding-bottom: 80px;
-  border-bottom: 1px solid $light-gray;
+  margin: 0px 60px 60px;
+  border-bottom: 2px solid $light-gray;
 
   .prev,
   .next {
@@ -193,9 +191,8 @@
       display: block;
       margin-bottom: 40px;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
-      background-color: $light-gray;
       transition: .35s ease-in-out;
 
       &:hover {
@@ -205,24 +202,19 @@
       &:after {
         content: "";
         display: table;
-        width: 100%;
-        padding-bottom: 65%;
+        padding-bottom: 250px;
       }
     }
 
     .post__nav__title {
-      margin-bottom: 20px;
-      font-size: 27px;
-      line-height: 37px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       a {
         display: inline-block;
         max-width: 250px;
         padding: 0 10px;
-        vertical-align: middle;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -236,18 +228,18 @@
   }
 
   .prev {
-    padding-right: 10px;
+    padding-right: 15px;
   }
 
   .next {
-    padding-left: 10px;
+    padding-left: 15px;
   }
 
   .prev__excerpt,
   .next__excerpt {
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     text-align: center;
   }
 
@@ -261,7 +253,7 @@
     }
 
     .next {
-      margin-top: 40px;
+      margin-top: 20px;
     }
   }
 

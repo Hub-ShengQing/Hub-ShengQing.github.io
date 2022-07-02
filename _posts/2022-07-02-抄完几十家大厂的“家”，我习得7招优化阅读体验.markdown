@@ -1,0 +1,318 @@
+---
+layout: post
+title:  "抄完几十家大厂的“家”，我习得7招优化阅读体验"
+date: 2022-07-02
+image:  https://s1.ax1x.com/2022/06/10/Xyjidg.jpg
+tags:   CSS 字体 排版
+description: 通过学习各家大厂的网页排版和字体设置，我们能更加优雅地选择<font color='#007AAA'>文字颜色、字体系列</font>，设置<font color='#007AAA'>字体大小、行高、行长</font>，优化<font color='#007AAA'>字体加载、纵向分布</font>，提升阅读体验感等等。
+---
+
+![起始线](https://s1.ax1x.com/2022/06/12/X2EkwQ.png)
+
+<div class="foreword">
+    <section id="section1"><b>重要的话先抛：</b></section>
+    <section id="section2"></section>
+    <br>
+    <ul id="forewordUL">
+        <li>优雅的排版就像是耐看型的美女，一颦一笑都拨动着你的心弦。</li>
+        <li>要慎用自定义字体，而不是完全摒弃。<gray>（颜值和实用性，并不是两极分化的，把握住平衡就好）</gray></li>
+        <li></li>
+        <li></li>
+        <li>记住，除了你自己，没人能限制你成为天才。</li>
+        </ul>
+</div>
+
+![正文箭头](https://s1.ax1x.com/2022/06/13/X2z59S.png)
+
+优化网页排版，你有什么建议吗？
+
+最近，我在开发个人博客的过程中，本以为简简单单的替换字体，却是一波三折，遇到了不少的麻烦。我不得不深入研究了一下字体属性的设置，顿觉一阵头大。排版的学问真不少呀！在发出这样的感叹的同时，也对搜寻相关资料的零散杂乱和繁复费解颇有体会。
+
+这便是写下该系列文章的初衷。**<red>一是在开发中遇到问题的一项个人笔记，培养独立思考能力；二是希望这些文章能对阅读中的你有些许帮助。</red>**少走弯路，没有内卷。
+
+## 0. 需详细解读的基础知识
+
+**这部分介绍了设置字体的样式、粗细、大小、行高、系列等基础知识。**有基础的读者可选择性阅读，笔记出处主要有：“[黑马程序员 pink 老师前端入门教程](https://www.bilibili.com/video/BV14J4114768?p=72)” 、“[MDN 基本文本和字体样式](https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)” 。
+
+### 0.1 font-style 文字样式
+
+【基本语法】
+
+```css
+/* 
+normal: 默认值，即正常的字体
+italic：斜体。对于没有斜体变量的特殊字体，将应用 oblique
+oblique：倾斜的字体
+*/
+
+font-style : normal | italic | oblique;
+```
+
+【注意事项】
+
+- 很少给文字加斜体，**反而要将斜体标签 `em`，`i` <blue>改为不倾斜的字体</blue>。**
+- 对应的脚本特性为 `fontStyle`。
+
+### 0.2 font-weight 文字粗细
+
+【基本语法】
+
+```css
+/* 
+normal：默认值。正常的字体，相当于 400
+bold：粗体。相当于 700，也相当于 b 标签的作用
+bolder：比 normal 粗
+lighter：比 normal 细
+100~900：数字越大，字越粗 
+*/
+
+font-weight : normal | bold | bolder | lighter;
+font-weight : 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+```
+
+【注意事项】
+
+- 实际开发时，我们更喜欢**用数字表示粗细，<blue>注意数字后面不跟单位</blue>**。
+- 对应的脚本特性为 `fontWeight`。
+
+### 0.3 font-size 文字大小
+
+【基本语法】
+
+```css
+/* 
+xx-small \| x-small \| small：绝对字体尺寸。根据对象字体进行调整。依次是：最小、较小、小 
+medium：默认值。绝对字体尺寸。根据对象字体进行调整。正常大小
+large \| x-large \| xx-large：绝对字体尺寸。根据对象字体进行调整。依次是：大、较大、最大
+larger \| smaller：相对字体尺寸。相对于父对像中字体尺寸进行相对增大或减小。使用成比例的 em 单位计算 
+length：相对字体尺寸。百分数 \| 由浮点数字和单位标识符组成的长度值，不可为负值
+*/
+
+font-size : xx-small | x-small | small;
+font-size : medium;
+font-size : large | x-large | xx-large;
+font-size : larger | smaller | length;
+```
+
+【注意事项】
+
+- 像素（px）是网页最常用的单位，可以给 `body` 指定整个页面文字的大小。
+- 不同浏览器可能默认的字号大小不一致，所以我们**尽量给定明确的大小**。
+- 对应的脚本特性为 `fontSize`。
+
+### 0.4 line-height 文本行高
+
+【基本语法】
+
+```css
+/* 
+normal：默认值。取决于 font-family，浏览器默认的行高值
+length：数字 | 百分比数字 | 由浮点数字和单位标识符组成的长度值 
+*/
+
+line-height : normal | length;
+```
+
+【注意事项】
+
+- **<red>大多数情况下，推荐用数字设置行高，这样在继承时不会导致意外的结果。</red>**
+- 对应的脚本特性为 `lineHeight`。
+- **<blue>区分 line-height 与 font-size</blue>**，如下图：
+
+![line-height vs font-size](https://img-blog.csdnimg.cn/img_convert/0cf96e46d3b419aeda6a18c6e90e09f6.png)
+*`line-height` 与 `font-size` 的区别*
+
+### 0.5 font-family 文字系列
+
+【基本语法】
+
+```
+// name：字体名称。按优先顺序排列，以逗号隔开
+font-family : name;
+```
+
+【注意事项】
+
+- **<blue>如果字体名称由空格隔开的多个单词组成，则字体名称需要加引号。</blue>**
+- 尽量使用系统默认自带字体，保证在任何用户的浏览器中都能正确显示。
+- 对应的脚本特性为 `fontFamily`。
+
+### 0.6 font 字体复合属性
+
+【基本语法】
+
+```
+font: font-style font-weight font-size/line-height font-family;
+```
+
+【注意事项】
+- 使用 `font` 属性时，必须按上面的语法格式中的顺序书写，**<red>不能更换顺序，且各个属性间以空格隔开</red>**。
+- 无需设置的属性可以省略（取默认值），但必须保留 `font-size` 和 `font-family` 属性，否则 `font` 属性将不起作用。
+
+## 1. 自带输出属性的对比色
+
+**<red>每种颜色都有其独特的能量。</red>**
+
+这里的能量，并非类似于“绿色”代表安全、环保、生命等这种人为添加的传递信息，而是颜色本身显现的力量。
+
+若要理清这个观点，我们得先明白，**色彩源自人们与物体连续不断的交互与感知，而非一种固有属性**。即色彩既是物体展示给我们的样子，也是我们感知到的样子。大脑对客观事物再塑造
+
+
+
+
+
+## 2. 辨识度高明的字体大小
+## 3. 稳妥的纯数字行高设置
+### 3.1 normal  默认的行高值
+
+**▶▶ 什么是 `normal`？**
+
+`normal` 指的是**浏览器的默认行高值**。若在网页中未设置过行高，文本的 `line-height` 将继承默认行高。大多数浏览器的默认行高约为 **110%~120%**。
+
+**▶▶ 默认行高是如何计算？**
+
+行高设置为 `normal`、`<数字>`、`<百分比>` 时，其实际像素值的计算公式如下：
+$$ 行高的实际像素值 = 字体大小 \times 设置的行高 $$
+**▶▶ 默认行高是多少像素？**
+
+我尝试打印了输出，只得到了浏览器默认的字体大小。倘若你知道如何输出默认行高像素值，请务必在评论区告知我，万分感谢。
+
+```
+<p>大多数浏览器的默认行高约为 110% 至 120%。</p>
+
+<script>
+    console.log($("p").css('font-size'));   // 16px
+    console.log($("p").css('line-height')); // normal
+</script>
+```
+
+### 3.2 设置行高最好使用数字
+
+**▶▶ 下面这段代码中的三个盒子的行高相等吗？**
+
+【CSS】
+
+```
+h1 {
+    font-size: 30px;
+}
+
+.red {
+    line-height: 1.1;
+    border: solid red;
+}
+
+.green {
+    line-height: 1.1em;
+    border: solid green;
+}
+
+.blue{
+    line-height: 110%;
+    border: solid blue;
+}
+
+.box {
+    width: 18em;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+}
+```
+
+【HTML】
+
+```
+<div class="box red">
+    <h1>使用数字设置行高可避免意外结果</h1>
+</div>
+
+<div class="box green">
+    <h1>“数字 + 单位”的赋值方式继承性很差</h1>
+</div>
+
+<div class="box blue">
+    <h1>百分比的赋值方式继承性很差</h1>
+</div>
+
+<script>
+    console.log($(".red h1").css('line-height'));   // 33px
+    console.log($(".green h1").css('line-height')); // 16.5px
+    console.log($(".blue h1").css('line-height'));  // 16.5px
+</script>
+```
+
+【输出结果】
+
+![不同赋值方式导致的行高继承性差异](https://img-blog.csdnimg.cn/img_convert/9f99a31113ef4afe220a16198574516e.png)
+
+**▶▶ 使用数字设置行高更稳妥**
+
+它们为什么会呈现出不同的结果呢？让我们来讨论一下各种形式的 `line-height`：
+
+1. **`<数字>`**——乘积因子，不允许负值。该数字会与**当前的 `font-size`** 相乘来确定行高。所以，红盒子内的标题行高计算式为：$(30px \times 1.1) = 33px$。
+2. **`<数字 + 相对长度单位>`** | **`<百分比>`**——这里的单位指的是一些如 `em`、`ex` 等有继承性的相对长度单位。百分比也是相对于另外一个值才存在的。这里，我们本想三个盒子的排版一致，事实上并没有。它们的行高计算式为：$(15px \times 1.1) = 16.5px$。
+
+为什么会这样呢？让我们看看 `em` 单位的定义：
+
+> `em` 是相对长度单位。相对于当前对象内文本的字体尺寸。**若当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。** —— [EM（HTML术语）_百度百科](https://baike.baidu.com/item/EM/13478112)
+
+这样看起来，它好像和 `<数字>` 有一样的效果。倘若 `em` 是相对于**当前对象的字体尺寸**，那么字体大小如此修改，行高又该是何值呢？
+
+```
+h1 {
+    font-size: 24px;
+    font-size: 2em;
+}
+```
+
+==> 答案并不是 `48px`，而是 `30px`。
+
+所以，我们可以这样认为，**`em` 实际上相对的是从父元素继承而来的字体大小，百分比也是。**
+
+**【结论】**
+
+有的人认为，`line-height` 使用 `<数字>` 和 `<数字 + em>` 是相同的。他们说，CSS 默认 `em` 为单位，所以 `em` 可以省略不写。事实上，这个观点是错误的，两者存在着区别——
+
+无论 `<数字 + 相对长度单位>` 还是 `<百分比>` 设置 `line-height`，**与之相乘的 `font-size` 都是由父元素继承而来的**。在元素本身上设置的 `font-size` 是不会对其产生影响的。
+
+相对的， `<数字>` 赋值的方式中，相乘的 `font-size` 来自元素本身（继承而来或是人为设置都可）。
+
+因此，**推荐使用纯 `<数字>` 来设置 `line-height`**，这样可以在排版上避开很多的意外。
+
+### 3.3 合适的行高提高阅读体验
+
+[Web 内容无障碍指南（WCAG）给出了如下建议](https://www.w3.org/TR/WCAG21/#text-spacing)：
+
+- 标题的 `line-height` 推荐使用约 **1.1 或 1.2**。
+- 正文的 `line-height` **至少应为 1.5，一般在 1.5~2.0 之间**。
+- 字间距至少为字体大小的 **0.16 倍**。
+- 段落间距至少为字体大小的 **2.0 倍**。 
+- 如果文字的大小要随页面的缩放而变化，**请使用纯数字的值**，以确保行高也会等比例缩放。
+
+这样的文字排布有助于改善低可视条件下的体验，也对认知阻碍者，如阅读困难者，有帮助。
+
+在实际应用中，使用最多的当属  `<数字>` 和 `<数字 + px>`，让我们看一下各大厂的写法：
+
+{% highlight css %}
+line-height: 1.47059;   // 苹果
+line-height: 20px;  // 亚马逊、微软
+line-height: 1.5;  // 淘宝、京东、网易
+line-height: 1.8;  // 腾讯
+font-size: 16px;  // 美团
+line-height: 1.34;  // Facebook
+line-height: 1.6;  // 知乎
+line-height: 1.42857;  // 简书
+{% endhighlight %}
+
+在实际开发过程中，我们需考虑网站的性质、平台的兼容、用户的体验等方面，然后去合理地选择行高值。
+
+## 4. 舒适度拉满的单行长度
+
+## 5. 科学而优雅地选择字体
+
+## 6. 网页字体加载的助力项
+
+## 7. 如何合理应用纵向分布
+
+未完待续……
